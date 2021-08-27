@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="처음으로 만드는 인디고 반응형 웹페이지">
+    <meta name="keywords" content="인디고,indigo,반응형,responsive,웹,web">    
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/reset-min.css">
+    <link rel="stylesheet" href="./css/default-min.css">
+    <link rel="stylesheet" href="./css/index-min.css">
+    <title>INDIGO</title>
+</head>
+<body>
+    <section class="section wrap">
+        <header class="header">
+            <div class="container dis-flex">
+                <h1 class="ci">
+                    <a href="index.html">INDIGO</a>
+                </h1>
+                <ul class="btn-nav" onclick="
+                    document.querySelector('.nav').classList.toggle('active');
+                ">
+                    <li class="line">네비게이션 호출 버튼</li>
+                    <li class="line">네비게이션 호출 버튼</li>
+                    <li class="line">네비게이션 호출 버튼</li>
+                </ul>
+                <nav class="nav">
+                    <ul class="dis-flex">
+                        <li><a href="./index.html">HOME</a></li>
+                        <li><a href="./we-are.html">WE ARE</a></li>
+                        <li><a href="./work.html">WORK</a></li>
+                        <li><a href="./blog.html">BLOG</a></li>
+                        <li><a href="./contact-us.html">CONTACT US</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="section slider">
+            <div class="container wid100">
+                <div class="img-box">
+                    <img src="./images/slide01.jpg" alt="슬라이더1 스케이트보드 타는 총각">
+                </div>
+            </div>
+        </section>
+        <section class="section we-are">
+            <div class="container">
+                <div class="we-are-top dis-flex">
+                    <h2>WE ARE</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit obcaecati in unde cupiditate sunt dicta quaerat porro corrupti. Optio odio eum molestias neque, in deleniti pariatur natus quae fugit reiciendis.</p>
+                </div>
+                <div class="we-are-bottom">
+                    <ul class="dis-flex">
+                        <li>
+                            <a href="#">
+                                <div class="link-img">
+                                    <img src="./images/promo01.png" alt="홈으로 이동">
+                                </div>
+                                <h3>HOME</h3>
+                                <p>동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="link-img">
+                                    <img src="./images/promo02.png" alt="위아로 이동">
+                                </div>
+                                <h3>WE ARE</h3>
+                                <p>남산 위에 저 소나무 철갑을 두른 듯 바람 서리 불변함은 우리 기상일세</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="link-img">
+                                    <img src="./images/promo03.png" alt="워크로 이동">
+                                </div>
+                                <h3>WORK</h3>
+                                <p>가을 하늘 공활한데 높고 구름 없이 밝은 달은 우리 가슴 일편단심일세</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="link-img">
+                                    <img src="./images/promo04.png" alt="블로그로 이동">
+                                </div>
+                                <h3>BLOG</h3>
+                                <p>이 기상과 이 맘으로 충성을 다하여 괴로우나 즐거우나 나라 사랑하세</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <hr class="first-line">
+        <section class="section work">
+            <div class="container wid100">
+                <h2>WORK</h2>
+                <ul class="dis-flex">
+                    <li>
+                        <a href="#">
+                            <img src="./images/work01.jpg" alt="마라톤">
+                        </a>
+                        <div class="over-box">
+                            <h4>마라톤</h4>
+                            <h5>웹/프린트</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/work02.jpg" alt="미식축구">
+                        </a>
+                        <div class="over-box">
+                            <h4>미식축구</h4>
+                            <h5>웹/프린트</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/work03.jpg" alt="헬스">
+                        </a>
+                        <div class="over-box">
+                            <h4>헬스</h4>
+                            <h5>웹/프린트</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/work04.jpg" alt="육상">
+                        </a>
+                        <div class="over-box">
+                            <h4>육상</h4>
+                            <h5>웹/프린트</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/work05.jpg" alt="권투">
+                        </a>
+                        <div class="over-box">
+                            <h4>권투</h4>
+                            <h5>웹/프린트</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/work06.jpg" alt="아이스하키">
+                        </a>
+                        <div class="over-box">
+                            <h4>아이스하키</h4>
+                            <h5>웹/프린트</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/work07.jpg" alt="스케이트보드">
+                        </a>
+                        <div class="over-box">
+                            <h4>스케이트보드</h4>
+                            <h5>웹/프린트</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/work08.jpg" alt="농구">
+                        </a>
+                        <div class="over-box">
+                            <h4>농구</h4>
+                            <h5>웹/프린트</h5>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <hr class="second-line">
+        <section class="section blog">
+            <div class="container">
+                <ul class="dis-flex">
+                    <li class="blog-list">
+                        <h2>BLOG</h2>
+                    </li>
+                    <li class="blog-list">
+                        <div class="blog-img">
+                            <img src="./images/blog01.jpg" alt="블로그1">
+                        </div>
+                        <h3>2021-05-05</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </li>
+                    <li class="blog-list">
+                        <div class="blog-img">
+                            <img src="./images/blog02.jpg" alt="블로그2">
+                        </div>
+                        <h3>2021-05-09</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </li>
+                    <li class="blog-list">
+                        <div class="blog-img">
+                            <img src="./images/blog03.jpg" alt="블로그3">
+                        </div>
+                        <h3>2021-06-05</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="section contact">
+            <div class="container">                
+                <form>                    
+                    <ul class="dis-flex">
+                        <li>
+                            <h2>CONTACT</h2>
+                        </li>
+                        <li>
+                            <input type="text" placeholder="Name">
+                            <input type="text" placeholder="Phone">
+                            <input type="text" placeholder="Email Address">
+                        </li>
+                        <li class="dis-flex">
+                            <textarea placeholder="Message"></textarea>
+                            <input type="button" value="SEND MESSAGE">
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </section>
+        <section class="section map">
+            <div class="container wid100">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.5184615589947!2d126.67502091558796!3d37.542847033241685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b7e16f11f3635%3A0xd3d8fb87825f4f2a!2z7Jew7Z2s7KeB7JeF7KCE66y47ZWZ6rWQ!5e0!3m2!1sko!2skr!4v1629963920687!5m2!1sko!2skr" allowfullscreen></iframe>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <h2><a href="index.html">INDIGO</a></h2>
+            </div>
+        </footer>
+    </section>
+</body>
+</html>
