@@ -61,10 +61,10 @@
 <body>
     <!-- 스팁메뉴 시작-->
     <div class="skip-menu">
-        <a href="#">we are 바로가기</a>
-        <a href="#">work 바로가기</a>
-        <a href="#">blog 바로가기</a>
-        <a href="#">contact us 바로가기</a>
+        <a href="#we-are">we are 바로가기</a>
+        <a href="#work">work 바로가기</a>
+        <a href="#blog">blog 바로가기</a>
+        <a href="#contact">contact us 바로가기</a>
     </div>
     <!-- 스킵메뉴 끝 -->
 
@@ -77,34 +77,79 @@
                 </h1>
                 <nav>
                     <ul>
-                        <li><a href="#">home</a></li>
-                        <li><a href="#">we are</a></li>
-                        <li><a href="#">work</a></li>
-                        <li><a href="#">blog</a></li>
-                        <li><a href="#">contact us</a></li>
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="#we-are">we are</a></li>
+                        <li><a href="#work">work</a></li>
+                        <li><a href="#blog">blog</a></li>
+                        <li><a href="#contact">contact us</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
         <section class="sec slider">
+            <div class="container">
+                <div class="slide slide01"><img src="./images/slide01.jpg" alt="슬라이드01"></div>
+                <div class="slide slide02"><img src="./images/slide01.jpg" alt="슬라이드02"></div>
+                <div class="slide slide03"><img src="./images/slide01.jpg" alt="슬라이드03"></div>
+                <div class="slide slide04"><img src="./images/slide01.jpg" alt="슬라이드04"></div>
+                <div class="slide slide05"><img src="./images/slide01.jpg" alt="슬라이드05"></div>
+                <div class="btn-pages">
+                    <div class="btn-page btn-page01">1</div>
+                    <div class="btn-page btn-page02">2</div>
+                    <div class="btn-page btn-page03">3</div>
+                    <div class="btn-page btn-page04">4</div>
+                    <div class="btn-page btn-page05">5</div>
+                </div>
+            </div>
+        </section>
+        <section class="sec we-are" id="we-are">
+            <div class="container">
+                <article>
+                    <h2>we are</h2>
+                    <p>
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+                        piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                    </p>
+                </article>
+                <article>
+                    <ul>
+                        <li>
+                            <div class="ico-box"><img src="./images/ico-pro01.jpg" alt="home"></div>
+                            <h3>home</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam facere molestias excepturi.</p>
+                        </li>
+                        <li>
+                            <div class="ico-box"><img src="./images/ico-pro02.jpg" alt="we are"></div>
+                            <h3>we are</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam facere molestias excepturi.</p>
+                        </li>
+                        <li>
+                            <div class="ico-box"><img src="./images/ico-pro03.jpg" alt="work"></div>
+                            <h3>work</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam facere molestias excepturi.</p>
+                        </li>
+                        <li>
+                            <div class="ico-box"><img src="./images/ico-pro04.jpg" alt="blog"></div>
+                            <h3>blog</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam facere molestias excepturi.</p>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+        <section class="sec divider">
             <div class="container"></div>
         </section>
-        <section class="sec we-are">
+        <section class="sec work" id="work">
             <div class="container"></div>
         </section>
         <section class="sec divider">
             <div class="container"></div>
         </section>
-        <section class="sec work">
+        <section class="sec blog" id="blog">
             <div class="container"></div>
         </section>
-        <section class="sec divider">
-            <div class="container"></div>
-        </section>
-        <section class="sec blog">
-            <div class="container"></div>
-        </section>
-        <section class="sec contact">
+        <section class="sec contact" id="contact">
             <div class="container"></div>
         </section>
         <section class="sec map">
