@@ -8,13 +8,111 @@
     <meta name="keywords" content="indigo,인디고,레포츠,reports">
     <meta name="author" content="cho hwan joon">
 
+    <!-- sns 오픈그래픽 -->
     <meta property="og:title" content="인디고">
     <meta property="og:url" content="https://pam7464.github.io/indigo/">
     <meta property="og:image" content="./images/og.jpg">
     <meta property="og:description" content="인디고에서 즐겨찾는 레포츠 정보를 찾아보세요">
-    <title>Document</title>
+
+    <!-- 트위터카드 -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="인디고">
+    <meta name="twitter:url" content="https://pam7464.github.io/indigo/">
+    <meta name="twitter:image" content="./images/og.jpg">
+    <meta name="twitter:description" content="인디고에서 즐겨찾는 레포츠 정보를 찾아보세요">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <!-- 폰트(noto sans kr) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <title>Indigo</title>
+    <style>
+        :root{
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight:400;
+            font-size:16px;
+            line-height:29px;
+            color:#616161;
+        }
+        /* 스킵 메뉴 스타일 */
+        .skip-menu a{
+            position:fixed;
+            left:0;
+            top:-100px;
+            z-index:10000;
+
+            padding:10px 20px;
+            background-color:#616161;
+            font-size:1.4em;
+            color:#fff;
+        }
+        .skip-menu a:focus{
+            top:0;
+        }
+
+    </style>
 </head>
 <body>
-    
+    <!-- 스팁메뉴 시작-->
+    <div class="skip-menu">
+        <a href="#">we are 바로가기</a>
+        <a href="#">work 바로가기</a>
+        <a href="#">blog 바로가기</a>
+        <a href="#">contact us 바로가기</a>
+    </div>
+    <!-- 스킵메뉴 끝 -->
+
+
+    <section class="wrap">
+        <header class="header">
+            <div class="container">
+                <h1 class="logo">
+                    <a href="index.html">indogo</a>
+                </h1>
+                <nav>
+                    <ul>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">we are</a></li>
+                        <li><a href="#">work</a></li>
+                        <li><a href="#">blog</a></li>
+                        <li><a href="#">contact us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="sec slider">
+            <div class="container"></div>
+        </section>
+        <section class="sec we-are">
+            <div class="container"></div>
+        </section>
+        <section class="sec divider">
+            <div class="container"></div>
+        </section>
+        <section class="sec work">
+            <div class="container"></div>
+        </section>
+        <section class="sec divider">
+            <div class="container"></div>
+        </section>
+        <section class="sec blog">
+            <div class="container"></div>
+        </section>
+        <section class="sec contact">
+            <div class="container"></div>
+        </section>
+        <section class="sec map">
+            <div class="container"></div>
+        </section>
+        <footer class="footer">
+            <div class="container"></div>
+        </footer>
+    </section>
 </body>
 </html>
