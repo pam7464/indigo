@@ -72,6 +72,9 @@
             height:0;
             overflow:hidden;
         }
+        .sec{
+            margin-bottom:120px;
+        }
 
         /* 스킵 메뉴 스타일 */
         .skip-menu a{
@@ -99,6 +102,7 @@
             left:0;
             right:0;
             top:0;
+            z-index:1000;
             padding:24px 52px;
             background-color:#fff;
         }
@@ -113,10 +117,53 @@
         /* HEADER 스타일 끝 */
 
         /* SLIDER 스타일 시작 */
-        .slider{margin-top:77px;}
-       
-      
+        .slider{
+            position:relative;
+            z-index:900;
+            margin-top:77px;
+        }
+        .bx-wrapper{
+            margin-bottom:0;
+            border:none;
+            box-shadow:none;
+        }
+        .bx-controls-direction{display:none;}
+        .bx-pager.bx-default-pager{
+            bottom:30px;
+        }
+        .bx-wrapper .bx-pager.bx-default-pager a{
+            width:16px;
+            height:16px;
+            border-radius:50%;
+            background-color:#616161;
+        }
+        .bx-wrapper .bx-pager.bx-default-pager a.active,
+        .bx-wrapper .bx-pager.bx-default-pager a:hover{
+            background-color:#3f51b5;
+        }
         /* SLIDER 스타일 끝 */
+
+        /* WE ARE 스타일 시작 */
+        .we-are h2{
+            float:left;
+            width:484px;
+            margin-right:20px;
+            border-right:2px solid #616161;
+        }
+        .we-are>.container>p{
+            float:left;
+            width:628px;
+        }
+        .we-are ul{float:left;}
+        .we-are li{
+            float:left;
+            width:268px;
+            margin-right:20px;
+        }
+        .we-are li:last-child{
+            margin-right:0;
+        }
+        /* WE ARE 스타일 끝 */
     </style>
 </head>
 <body>
@@ -151,44 +198,43 @@
             <div class="container full-container">
                 <h2 class="hidden-tit">slider</h2>
                 <div class="slide">
-                    <div>I am a slide.</div>
-                    <div>I am another slide.</div>
+                    <div><img src="./images/slide01.jpg" alt="슬라이드1"></div>
+                    <div><img src="./images/slide01.jpg" alt="슬라이드2"></div>
+                    <div><img src="./images/slide01.jpg" alt="슬라이드3"></div>
+                    <div><img src="./images/slide01.jpg" alt="슬라이드4"></div>
+                    <div><img src="./images/slide01.jpg" alt="슬라이드5"></div>                    
                 </div>
             </div>
         </section>
         <section class="sec we-are" id="we-are">
-            <div class="container">
-                <article>
-                    <h2>we are</h2>
-                    <p>
-                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-                        piece of classical Latin literature from 45 BC, making it over 2000 years old.
-                    </p>
-                </article>
-                <article>
-                    <ul>
-                        <li>
-                            <div class="ico-box"><img src="./images/ico-pro01.jpg" alt="home"></div>
-                            <h3>home</h3>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam facere molestias excepturi.</p>
-                        </li>
-                        <li>
-                            <div class="ico-box"><img src="./images/ico-pro02.jpg" alt="we are"></div>
-                            <h3>we are</h3>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam facere molestias excepturi.</p>
-                        </li>
-                        <li>
-                            <div class="ico-box"><img src="./images/ico-pro03.jpg" alt="work"></div>
-                            <h3>work</h3>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam facere molestias excepturi.</p>
-                        </li>
-                        <li>
-                            <div class="ico-box"><img src="./images/ico-pro04.jpg" alt="blog"></div>
-                            <h3>blog</h3>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam facere molestias excepturi.</p>
-                        </li>
-                    </ul>
-                </article>
+            <div class="container clearfix">
+                <h2>we are</h2>
+                <p>
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+                    piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                </p>
+                <ul class="clearfix">
+                    <li>
+                        <div class="ico-box"><img src="./images/ico-pro01.jpg" alt="home"></div>
+                        <h3>home</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam facere molestias excepturi.</p>
+                    </li>
+                    <li>
+                        <div class="ico-box"><img src="./images/ico-pro02.jpg" alt="we are"></div>
+                        <h3>we are</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam facere molestias excepturi.</p>
+                    </li>
+                    <li>
+                        <div class="ico-box"><img src="./images/ico-pro03.jpg" alt="work"></div>
+                        <h3>work</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam facere molestias excepturi.</p>
+                    </li>
+                    <li>
+                        <div class="ico-box"><img src="./images/ico-pro04.jpg" alt="blog"></div>
+                        <h3>blog</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam facere molestias excepturi.</p>
+                    </li>
+                </ul>
             </div>
         </section>
         <section class="sec divider">
