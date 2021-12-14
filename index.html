@@ -29,6 +29,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
+    <!-- BXSlider  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  
     <!-- CSS Reset -->
     <link rel="stylesheet" href="./css/reset.css">
     <title>Indigo</title>
@@ -63,6 +68,10 @@
         h3{
             font-size:16px;
         }
+        .hidden-tit{
+            height:0;
+            overflow:hidden;
+        }
 
         /* 스킵 메뉴 스타일 */
         .skip-menu a{
@@ -84,6 +93,7 @@
             overflow:hidden;
         }
 
+        /* HEADER 스타일 시작 */
         .header{
             position:fixed;
             left:0;
@@ -100,7 +110,13 @@
             text-transform:uppercase;
             color:#3f51b5;
         }
+        /* HEADER 스타일 끝 */
 
+        /* SLIDER 스타일 시작 */
+        .slider{margin-top:77px;}
+       
+      
+        /* SLIDER 스타일 끝 */
     </style>
 </head>
 <body>
@@ -133,17 +149,10 @@
         </header>
         <section class="sec slider">
             <div class="container full-container">
-                <div class="slide slide01"><img src="./images/slide01.jpg" alt="슬라이드01"></div>
-                <div class="slide slide02"><img src="./images/slide01.jpg" alt="슬라이드02"></div>
-                <div class="slide slide03"><img src="./images/slide01.jpg" alt="슬라이드03"></div>
-                <div class="slide slide04"><img src="./images/slide01.jpg" alt="슬라이드04"></div>
-                <div class="slide slide05"><img src="./images/slide01.jpg" alt="슬라이드05"></div>
-                <div class="btn-pages">
-                    <div class="btn-page btn-page01">1</div>
-                    <div class="btn-page btn-page02">2</div>
-                    <div class="btn-page btn-page03">3</div>
-                    <div class="btn-page btn-page04">4</div>
-                    <div class="btn-page btn-page05">5</div>
+                <h2 class="hidden-tit">slider</h2>
+                <div class="slide">
+                    <div>I am a slide.</div>
+                    <div>I am another slide.</div>
                 </div>
             </div>
         </section>
@@ -299,7 +308,7 @@
         </section>
         <section class="sec map">
             <div class="container">
-                <h2>map</h2>
+                <h2 class="hidden-tit">map</h2>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.518461558965!2d126.67502091515327!3d37.54284703324238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b7e16f11f3635%3A0xd3d8fb87825f4f2a!2z7Jew7Z2s7KeB7JeF7KCE66y47ZWZ6rWQ!5e0!3m2!1sko!2skr!4v1639463472606!5m2!1sko!2skr" width="1132" height="420" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </section>
@@ -309,5 +318,10 @@
             </div>
         </footer>
     </section>
+    <script>
+        $(document).ready(function(){
+            $('.slide').bxSlider();
+        });
+    </script>
 </body>
 </html>
