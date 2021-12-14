@@ -33,6 +33,11 @@
     <link rel="stylesheet" href="./css/reset.css">
     <title>Indigo</title>
     <style>
+        .clearfix::after{
+            content:'';
+            display:block;
+            clear:both;
+        }
         :root{
             font-family: 'Noto Sans KR', sans-serif;
             font-weight:400;
@@ -40,6 +45,25 @@
             line-height:29px;
             color:#616161;
         }
+        .container{
+            width:1132px;
+            margin:0 auto;
+        }
+        .full-container{
+            width:100%;
+        }
+        h1,h2,h3{
+            font-size:26px;
+            color:#3f51b5;
+            text-transform:uppercase;
+        }
+        h2{
+            font-size:42px;
+        }
+        h3{
+            font-size:16px;
+        }
+
         /* 스킵 메뉴 스타일 */
         .skip-menu a{
             position:fixed;
@@ -54,6 +78,27 @@
         }
         .skip-menu a:focus{
             top:0;
+        }
+
+        .wrap{
+            overflow:hidden;
+        }
+
+        .header{
+            position:fixed;
+            left:0;
+            right:0;
+            top:0;
+            padding:24px 52px;
+            background-color:#fff;
+        }
+        .header .container h1{float:left;}
+        .header .container nav{float:right;}
+        .header .container nav ul li{
+            display:inline-block;
+            margin-left:22px;
+            text-transform:uppercase;
+            color:#3f51b5;
         }
 
     </style>
@@ -71,7 +116,7 @@
 
     <section class="wrap">
         <header class="header">
-            <div class="container">
+            <div class="container full-container clearfix">
                 <h1 class="logo">
                     <a href="index.html">indogo</a>
                 </h1>
@@ -87,7 +132,7 @@
             </div>
         </header>
         <section class="sec slider">
-            <div class="container">
+            <div class="container full-container">
                 <div class="slide slide01"><img src="./images/slide01.jpg" alt="슬라이드01"></div>
                 <div class="slide slide02"><img src="./images/slide01.jpg" alt="슬라이드02"></div>
                 <div class="slide slide03"><img src="./images/slide01.jpg" alt="슬라이드03"></div>
@@ -143,7 +188,7 @@
             </div>
         </section>
         <section class="sec work" id="work">
-            <div class="container">
+            <div class="container full-container">
                 <h2>work</h2>
                 <div class="work-list">
                     <ul>
@@ -244,15 +289,24 @@
                     <input type="text" name="name" id="name" placeholder="Name">
                     <label for="phone">phone</label>
                     <input type="text" name="phone" id="phone" placeholder="Phone">
-
+                    <label for="email">email address</label>
+                    <input type="text" name="email" id="email" placeholder="Email Address">
+                    <label for="message">message</label>
+                    <textarea name="message" id="message" placeholder="Message"></textarea>
+                    <input type="submit" value="SEND MESSAGE">
                 </form>
             </div>
         </section>
         <section class="sec map">
-            <div class="container"></div>
+            <div class="container">
+                <h2>map</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.518461558965!2d126.67502091515327!3d37.54284703324238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b7e16f11f3635%3A0xd3d8fb87825f4f2a!2z7Jew7Z2s7KeB7JeF7KCE66y47ZWZ6rWQ!5e0!3m2!1sko!2skr!4v1639463472606!5m2!1sko!2skr" width="1132" height="420" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
         </section>
         <footer class="footer">
-            <div class="container"></div>
+            <div class="container">
+                <address>indigo</address>
+            </div>
         </footer>
     </section>
 </body>
