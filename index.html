@@ -249,6 +249,50 @@
             transform:translateY(0);
         }
         /* Work 스타일 끝 */
+        .mine-divider hr{
+            width:20px;
+            margin:0 auto;
+            background-color:#3f51b5;
+        }
+
+        /* BLOG 스타일 시작 */
+        .blog h2,.blog li{
+            float:left;
+            width:268px;
+            margin-right:20px;
+        }
+        .blog .blog-list{
+            float:left;
+            width:844px;
+        }
+        .blog li:last-child{
+            margin-right:0;
+        }
+        .blog .blog-img{
+            margin-bottom:3px;
+        }
+        .blog h3{
+            font-weight:100;
+            font-size:11px;
+            color:#9e9e9e;
+        }
+        .blog h3+p{
+            line-height:27px;
+        }
+
+        .blog li{
+            perspective:500px;
+        }
+        .blog li .li-content{
+            transform:rotateY(0);
+            backface-visibility:hidden;
+            transition:0.3s;
+        }
+        .blog li:hover .li-content{
+            transform:rotateY(360deg);
+        }
+
+        /* BLOG 스타일 끝 */
     </style>
 </head>
 <body>
@@ -388,30 +432,36 @@
                 </div>
             </div>
         </section>
-        <section class="sec divider">
+        <section class="sec mine-divider">
             <div class="container">
                 <hr>
             </div>
         </section>
         <section class="sec blog" id="blog">
-            <div class="container">
+            <div class="container clearfix">
                 <h2>blog</h2>
                 <div class="blog-list">
-                    <ul>
+                    <ul class="clearfix">
                         <li>
-                            <div class="blog-img"><img src="./images/img-blog01.jpg" alt="블로그1"></div>
-                            <h3>2021-12-14</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, cumque!</p>
+                            <div class="li-content">
+                                <div class="blog-img"><img src="./images/img-blog01.jpg" alt="블로그1"></div>
+                                <h3>2021-12-14</h3>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, cumque!</p>
+                            </div>
                         </li>
                         <li>
-                            <div class="blog-img"><img src="./images/img-blog02.jpg" alt="블로그2"></div>
-                            <h3>2021-12-10</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, cumque!</p>
+                            <div class="li-content">
+                                <div class="blog-img"><img src="./images/img-blog02.jpg" alt="블로그2"></div>
+                                <h3>2021-12-10</h3>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, cumque!</p>
+                            </div>
                         </li>
                         <li>
-                            <div class="blog-img"><img src="./images/img-blog03.jpg" alt="블로그3"></div>
-                            <h3>2021-12-02</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, cumque!</p>
+                            <div class="li-content">
+                                <div class="blog-img"><img src="./images/img-blog03.jpg" alt="블로그3"></div>
+                                <h3>2021-12-02</h3>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, cumque!</p>
+                            </div>
                         </li>
                     </ul>
                 </div>
