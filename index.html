@@ -75,7 +75,11 @@
         .sec{
             margin-bottom:120px;
         }
-
+        hr{
+            height:2px;
+            background-color:#e0e0e0;
+            border:none;
+        }
         /* 스킵 메뉴 스타일 */
         .skip-menu a{
             position:fixed;
@@ -91,7 +95,6 @@
         .skip-menu a:focus{
             top:0;
         }
-
         .wrap{
             overflow:hidden;
         }
@@ -194,6 +197,58 @@
             line-height:23px;
         }
         /* WE ARE 스타일 끝 */
+
+        /* Work 스타일 시작 */
+        .work h2{
+            width:1132px;
+            margin:0 auto 86px;
+        }
+        .work li{
+            position:relative;
+            float:left;
+            width:25%;
+            overflow:hidden;
+        }
+        .work .work-txt{
+            position:absolute;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+            transform:translateY(100%);
+            transition:0.3s;
+
+            padding:30px;
+            font-size:11px;
+            color:#fff; 
+            opacity:0;           
+        }
+        .work li:hover .work-txt{
+            transform:translateY(0);
+            opacity:1;
+        }
+        .work .work-txt h3{
+            font-size:23px;
+            color:#fff;
+        }
+        .work li::before{
+            content:'';
+            display:block;
+            background-color:#3f51b5;
+            opacity:0.86;
+
+            position:absolute;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+            transform:translateY(-100%);
+            transition:0.3s;
+        }
+        .work li:hover::before{
+            transform:translateY(0);
+        }
+        /* Work 스타일 끝 */
     </style>
 </head>
 <body>
@@ -246,19 +301,19 @@
                 <ul class="clearfix">
                     <li>                        
                         <h3>home</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam facere molestias excepturi.</p>
+                        <p>ipsum,  sit amet consectetur adipisicing elit. Ullam  molestias excepturi.</p>
                     </li>
                     <li>                        
                         <h3>we are</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam facere molestias excepturi.</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam facere  excepturi.</p>
                     </li>
                     <li>                        
                         <h3>work</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam facere molestias excepturi.</p>
+                        <p>Lorem ipsum, dolor sit amet  adipisicing elit. Ullam facere molestias excepturi.</p>
                     </li>
                     <li>
                         <h3>blog</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam facere molestias excepturi.</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur  elit. Ullam facere molestias excepturi.</p>
                     </li>
                 </ul>
             </div>
@@ -272,7 +327,7 @@
             <div class="container full-container">
                 <h2>work</h2>
                 <div class="work-list">
-                    <ul>
+                    <ul class="clearfix">
                         <li>
                             <div class="work-img"><img src="./images/img-work01.jpg" alt="달리기"></div>
                             <div class="work-txt">
