@@ -1,3 +1,4 @@
+/* 데스크탑(1132px 이상)스타일 */
 @charset 'utf-8';
 
 .clearfix::after{
@@ -307,7 +308,7 @@ form input[type="submit"]{
     text-transform:uppercase;
 }
 
-
+/* 테블릿(1131px 이하) 적용 스타일 */
 @media (max-width:1131px){
     .we-are .container,.blog .container,.contact .container,.map .container,.divider .container,.footer .container{
         width:100%;
@@ -384,4 +385,23 @@ form input[type="submit"]{
     }
     .map iframe{width:100%;}
     /* BLOG,CONTACT 스타일 끝 */
+}
+
+
+/* 모바일(768px 이하) 적용 스타일 */
+@media (max-width:768px){
+    .we-are li,.work li,.blog li{
+        width:100%;
+        margin-right:0;
+    }
+    .we-are li{
+        margin-bottom:60px;
+    }
+    .we-are li:last-child{
+        margin-bottom:0;
+    }
+    .blog li{
+        padding-left:20px;
+        padding-right:20px;
+    }
 }
