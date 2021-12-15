@@ -60,18 +60,30 @@
                 <h1 class="logo">
                     <a href="index.html">indogo</a>
                 </h1>
-                <div class="btn-nav">
+                <div class="btn-nav" onclick="
+                    $('nav').slideToggle(500);
+                ">
                     <span>네비게이션 호출</span>
                     <span>네비게이션 호출</span>
                     <span>네비게이션 호출</span>
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="index.html">home</a></li>
-                        <li><a href="#we-are">we are</a></li>
-                        <li><a href="#work">work</a></li>
-                        <li><a href="#blog">blog</a></li>
-                        <li><a href="#contact">contact us</a></li>
+                        <li><a href="index.html" onclick="
+                                $('nav').slideUp();
+                            ">home</a></li>
+                        <li><a href="#we-are" onclick="
+                                $('nav').slideUp();
+                        ">we are</a></li>
+                        <li><a href="#work" onclick="
+                            $('nav').slideUp();
+                        ">work</a></li>
+                        <li><a href="#blog" onclick="
+                            $('nav').slideUp();
+                        ">blog</a></li>
+                        <li><a href="#contact" onclick="
+                            $('nav').slideUp();
+                        ">contact us</a></li>
                     </ul>
                 </nav>
             </div>
@@ -254,7 +266,7 @@
     </section>
     <script>
         $(document).ready(function(){
-            $('.slide').bxSlider();
+            $('.slide').bxSlider();            
         });
     </script>
 </body>
