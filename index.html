@@ -75,6 +75,9 @@
         .sec{
             margin-bottom:120px;
         }
+        .sec:last-of-type{
+            margin-bottom:0;
+        }
         hr{
             height:2px;
             background-color:#e0e0e0;
@@ -255,17 +258,21 @@
             background-color:#3f51b5;
         }
 
-        /* BLOG 스타일 시작 */
-        .blog h2,.blog li{
+        /* BLOG,CONTACT 스타일 시작 */
+        .blog h2,.contact h2,.blog li,.contact fieldset{
             float:left;
             width:268px;
             margin-right:20px;
         }
-        .blog .blog-list{
+        .contact fieldset{
+            width:412px;
+            border:none;
+        }
+        .blog .blog-list,.contact form{
             float:left;
             width:844px;
         }
-        .blog li:last-child{
+        .blog li:last-child,.contact fieldset:last-child{
             margin-right:0;
         }
         .blog .blog-img{
@@ -291,8 +298,52 @@
         .blog li:hover .li-content{
             transform:rotateY(360deg);
         }
+        form label,form input,form textarea{
+            width:100%;
+        }
+        form label{
+            height:0;
+            overflow:hidden;
+        }
+        form fieldset:first-child input,form textarea{
+            border:none;
+            margin-bottom:12px;
+            border-bottom:1px solid #757575;
+            padding:12px;
+            background-color:#fff;
+            font-size:12px;
+            color:#3f51b5;
+        }
+        form fieldset:first-child input::placeholder,form textarea::placeholder{
+            font-size:12px;
+            color:#3f51b5;
+        }
+        form fieldset:last-child{
+            text-align:right;
+        }
+        form textarea{
+            height:142px;
+        }
+        form input[type="submit"]{
+            display:inline-block;
+            width:124px;
+            border:none;
+            padding:12px 0;
+            background-color:#3f51b5;
+            font-size:12px;
+            color:#fff;
+            text-align:center;
+        }
+        /* BLOG,CONTACT 스타일 끝 */
 
-        /* BLOG 스타일 끝 */
+        .footer address{
+            padding:10px 0;
+            text-align:center;
+            color:#3f51b5;
+            font-style:normal;
+            text-transform:uppercase;
+        }
+       
     </style>
 </head>
 <body>
@@ -468,18 +519,22 @@
             </div>
         </section>
         <section class="sec contact" id="contact">
-            <div class="container">
+            <div class="container clearfix">
                 <h2>contact</h2>
-                <form>
-                    <label for="name">name</label>
-                    <input type="text" name="name" id="name" placeholder="Name">
-                    <label for="phone">phone</label>
-                    <input type="text" name="phone" id="phone" placeholder="Phone">
-                    <label for="email">email address</label>
-                    <input type="text" name="email" id="email" placeholder="Email Address">
-                    <label for="message">message</label>
-                    <textarea name="message" id="message" placeholder="Message"></textarea>
-                    <input type="submit" value="SEND MESSAGE">
+                <form class="clearfix">
+                    <fieldset>
+                        <label for="name">name</label>
+                        <input type="text" name="name" id="name" placeholder="Name">
+                        <label for="phone">phone</label>
+                        <input type="tel" name="phone" id="phone" placeholder="Phone">
+                        <label for="email">email address</label>
+                        <input type="email" name="email" id="email" placeholder="Email Address">
+                    </fieldset>
+                    <fieldset>
+                        <label for="message">message</label>
+                        <textarea name="message" id="message" placeholder="Message"></textarea>
+                        <input type="submit" value="SEND MESSAGE">
+                    </fieldset>
                 </form>
             </div>
         </section>
