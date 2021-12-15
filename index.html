@@ -103,6 +103,7 @@
             right:0;
             top:0;
             z-index:1000;
+            border-bottom:1px solid #e0e0e0;
             padding:24px 52px;
             background-color:#fff;
         }
@@ -148,20 +149,49 @@
             float:left;
             width:484px;
             margin-right:20px;
-            border-right:2px solid #616161;
+            margin-bottom:122px;
+            border-right:2px solid #e0e0e0;
+            padding:7.5px 0;
         }
         .we-are>.container>p{
             float:left;
             width:628px;
+            margin-top:-10px;
         }
-        .we-are ul{float:left;}
+        .we-are ul{
+            float:left;
+        }
         .we-are li{
             float:left;
             width:268px;
             margin-right:20px;
-        }
+        }        
         .we-are li:last-child{
             margin-right:0;
+        }
+        .we-are li::before{
+            content:'';
+            display:block;
+            height:50px;
+            margin-bottom:21px;
+            background:url(./images/ico-pro01.jpg) no-repeat center top;
+        }
+        .we-are li:nth-child(2)::before{
+            background-image:url(./images/ico-pro02.jpg);
+        }
+        .we-are li:nth-child(3)::before{
+            background-image:url(./images/ico-pro03.jpg);
+        }
+        .we-are li:nth-child(4)::before{
+            background-image:url(./images/ico-pro04.jpg);
+        }
+        .we-are h3{
+            margin-bottom:10px;
+            text-align:center;
+        }
+        .we-are h3+p{
+            font-size:14px;
+            line-height:23px;
         }
         /* WE ARE 스타일 끝 */
     </style>
@@ -214,23 +244,19 @@
                     piece of classical Latin literature from 45 BC, making it over 2000 years old.
                 </p>
                 <ul class="clearfix">
-                    <li>
-                        <div class="ico-box"><img src="./images/ico-pro01.jpg" alt="home"></div>
+                    <li>                        
                         <h3>home</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam facere molestias excepturi.</p>
                     </li>
-                    <li>
-                        <div class="ico-box"><img src="./images/ico-pro02.jpg" alt="we are"></div>
+                    <li>                        
                         <h3>we are</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam facere molestias excepturi.</p>
                     </li>
-                    <li>
-                        <div class="ico-box"><img src="./images/ico-pro03.jpg" alt="work"></div>
+                    <li>                        
                         <h3>work</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam facere molestias excepturi.</p>
                     </li>
                     <li>
-                        <div class="ico-box"><img src="./images/ico-pro04.jpg" alt="blog"></div>
                         <h3>blog</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam facere molestias excepturi.</p>
                     </li>
