@@ -2,7 +2,7 @@
 
 html,head,title,body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,table,tr,td,thead,tbody,tfoot,th,div,span,
 a,img,br,hr,pre,strong,form,label,input,select,textarea,fieldset,legend,figure,figcaption,header,section,footer,
-aside,address,article,audio,video,picture,option{
+aside,address,article,audio,video,picture,option,iframe{
     box-sizing:border-box;
     margin:0;
     padding:0;
@@ -20,4 +20,7 @@ ul,ol,li{
 }
 h1,h2,h3,h4,h5,h6,strong{
     font-weight:normal;
+}
+img,span,video,audio,label,input,textarea,select,iframe{
+    display:block;
 }
