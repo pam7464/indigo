@@ -209,6 +209,7 @@
             float:left;
             width:100%;
             position:relative;
+            overflow:hidden;
         }
         .work .sec-list::before{
             content:'';
@@ -218,7 +219,8 @@
             right:0;
             top:0;
             bottom:0;
-            background-color:rgba(63, 81, 181,0.5);
+            background-color:rgba(63, 81, 181,0.8);
+            transform:translateY(-100%);
         }
         .work .sec-list .sec-list-tit{
             position:absolute;
@@ -226,6 +228,7 @@
             left:20px;
             font-size:23px;
             color:#fff;
+            transform:translateY(-100px);
         }
         .work .sec-list .sec-list-txt{
             position:absolute;
@@ -233,8 +236,64 @@
             left:20px;
             font-size:11px;
             color:#fff;
+            transform:translateY(-130px);
         }
-       
+        .work .sec-list:hover::before,
+        .work .sec-list:hover .sec-list-tit,
+        .work .sec-list:hover .sec-list-txt{
+            transform:translateY(0);
+        }
+        .mini-divider .contents{
+            width:20px;
+            height:2px;
+            margin:0 auto;
+            background-color:#3f51b5;
+            text-indent: -99999px;
+        }
+        /* blog 스타일 */
+        .blog .sec-tit,.blog .sec-contents{
+            float:left;
+            width:100%;
+        }
+        .blog .sec-tit{
+            margin-bottom:60px;
+        }
+        .blog .sec-list{
+            float:left;
+            width:100%;
+            margin-bottom:60px;
+        }
+        .blog .sec-list:last-child{
+            margin-bottom:0;
+        }
+        .blog .img-box{
+            margin-bottom:8px;
+        }
+        .blog .sec-list-tit{
+            font-size:11px;
+            color:#9e9e9e;
+        }
+        .blog .sec-list-txt{
+            font-size:16px;
+            color:#424242;
+            line-height:27px;
+        }
+
+        /* map스타일 */
+        .wrap>.map{
+            margin-bottom:0;
+        }
+        .map iframe{
+            width:100%;
+            height:60vw;
+        }
+        .footer{
+            padding:30px;
+            font-size:16px;
+            color:#3f51b5;
+            text-align:center;
+            text-transform:uppercase;
+        }
 
         /* 테블릿(최소 뷰포트너비 768px) 스타일 */
         @media (min-width:768px){          
@@ -296,6 +355,21 @@
             .work .sec-list{
                 width:50%;
             }
+
+            /* blog 스타일 */
+            .blog .sec-list{
+                float:left;
+                width:calc(33.33333333333333% - 13.33333333333333px);
+                margin-right:20px;
+                margin-bottom:0;
+            }
+            .blog .sec-list:last-child{
+                margin-right:0;
+            }
+            /* map스타일 */
+            .map iframe{
+                height:50vw;
+            }
         }
 
         /* 데스크탑(최소 뷰포트크기 1200px) 스타일 */
@@ -327,6 +401,26 @@
              /* work 스타일 */
              .work .sec-list{
                 width:25%;
+            }
+
+            /* blog 스타일 */
+            .blog .sec-tit{
+                width:268px;
+                margin-right:20px;
+            }
+            .blog .sec-contents{
+                width:844px;
+            }
+            .blog .sec-list{
+                width:268px;
+            }
+            /* map스타일 */
+
+            .map .jumbo{
+                max-width:1132px;
+            }
+            .map iframe{
+                height:500px;
             }
         }
     </style>
@@ -493,17 +587,31 @@
         </section>
         <section class="sec blog">
             <div class="container">
-                <div class="contents">
+                <div class="contents clearfix">
                     <div class="sec-tit">
                         <h2>blog</h2>
                     </div>
-                    <div class="sec-contents">
-
+                    <div class="sec-contents clearfix">
+                        <div class="sec-list sec-list01">
+                            <div class="img-box"><img src="./images/img-blog01.jpg" alt="블로그1"></div>
+                            <h3 class="sec-list-tit">OCT 30, 2016</h3>
+                            <p class="sec-list-txt">There are many variations of <br> passages of Lorem Ipsum</p>
+                        </div>
+                        <div class="sec-list sec-list02">
+                            <div class="img-box"><img src="./images/img-blog02.jpg" alt="블로그2"></div>
+                            <h3 class="sec-list-tit">OCT 28, 2016</h3>
+                            <p class="sec-list-txt">There are many variations of <br> passages of Lorem Ipsum</p>
+                        </div>
+                        <div class="sec-list sec-list03">
+                            <div class="img-box"><img src="./images/img-blog03.jpg" alt="블로그3"></div>
+                            <h3 class="sec-list-tit">OCT 26, 2016</h3>
+                            <p class="sec-list-txt">There are many variations of <br> passages of Lorem Ipsum</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="sec contact">
+        <!-- <section class="sec contact">
             <div class="container">
                 <div class="contents">
                     <div class="sec-tit">
@@ -514,15 +622,15 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <section class="sec map">
-            <div class="container">
+            <div class="container jumbo">
                 <div class="contents">
                     <div class="sec-tit hidden-tit">
                         <h2>map</h2>
                     </div>
                     <div class="sec-contents">
-
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5324.407736223692!2d126.808064084262!3d37.48640811089386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b6292dfe5a60d%3A0x2089560551cb5515!2z6rK96riw64-EIOu2gOyynOyLnCDsm5Drr7jqtawg7KeA67SJ66GcMTE167KI6ri4IDIw!5e0!3m2!1sko!2skr!4v1639641635108!5m2!1sko!2skr" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
             </div>
