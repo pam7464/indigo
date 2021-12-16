@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/reset.css">
+    <!-- swiperjs slider -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
     <title>INDIGO</title>
     <style>
         .clearfix::after{
@@ -31,9 +35,17 @@
         .wrap{
             overflow:hidden;
         }
+        .wrap>.sec{
+            margin-bottom:124px;
+        }
+
         /* HEADER 스타일 */
         .header{
             background-color:rgba(0,0,0,0.1);
+            position:fixed;
+            left:0;
+            right:0;
+            top:0;
         }
         .header .container{
             max-width:1440px;
@@ -104,11 +116,14 @@
 
         /* 테블릿(최소 뷰포트너비 768px) 스타일 */
         @media (min-width:768px){
+            .header{
+                position:static;
+            }
             .header .btn-nav{
                 display:none;
             }             
             .header .nav{
-                display:block;
+                display:block !important;
                 float:right;
                 position:static;
 
@@ -140,11 +155,15 @@
             <div class="container jumbo">
                 <div class="contents clearfix">
                     <h1><a href="./index.html">indigo</a></h1>
-                    <div class="btn-nav">
+                    <div class="btn-nav" onclick="
+                        document.querySelector('.nav').style.display = 'block';
+                    ">
                         <span>네비게이션 호출 버튼</span>
                     </div>
                     <nav class="nav">
-                        <div class="btn-close">닫기</div>
+                        <div class="btn-close" onclick="
+                            document.querySelector('.nav').style.display = 'none';
+                        ">닫기</div>
                         <ul class="clearfix">
                             <li><a href="#">home</a></li>
                             <li><a href="#">we are</a></li>
@@ -156,6 +175,87 @@
                 </div>
             </div>
         </header>
+        <section class="sec main-slider">
+            <div class="container jumbo">
+                <div class="contents">
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">Slide 1</div>
+                            <div class="swiper-slide">Slide 2</div>
+                            <div class="swiper-slide">Slide 3</div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                    
+                        <!-- If we need navigation buttons -->
+                        <!-- <div class="swiper-button-prev"></div> -->
+                        <!-- <div class="swiper-button-next"></div> -->
+                    
+                        <!-- If we need scrollbar -->
+                        <!-- <div class="swiper-scrollbar"></div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sec we-are">
+            <div class="container">
+                <div class="contents">
+                    we are
+                </div>
+            </div>
+        </section>
+        <section class="sec diveder">
+            <div class="container">
+                <div class="contents">
+                    긴라인
+                </div>
+            </div>
+        </section>
+        <section class="sec work">
+            <div class="container jumbo">
+                <div class="contents">
+                    work
+                </div>
+            </div>
+        </section>
+        <section class="sec mini-diveder">
+            <div class="container">
+                <div class="contents">
+                    mini
+                </div>
+            </div>
+        </section>
+        <section class="sec blog">
+            <div class="container">
+                <div class="contents">
+                    blog
+                </div>
+            </div>
+        </section>
+        <section class="sec contact">
+            <div class="container">
+                <div class="contents">
+                    contact
+                </div>
+            </div>
+        </section>
+        <section class="sec map">
+            <div class="container">
+                <div class="contents">
+                    map
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="contents">
+                    footer
+                </div>
+            </div>
+        </footer>
     </section>
 </body>
 </html>
