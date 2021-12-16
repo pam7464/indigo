@@ -52,7 +52,8 @@
             text-transform:uppercase;
         }
         .sec-list{
-            float:left;            
+            float:left;
+            width:100%;            
         }
 
         /* HEADER 스타일 */
@@ -166,6 +167,73 @@
             line-height:22px;
             text-transform:none;
         }
+        .we-are .img-box{
+            height:52px;                    
+        }
+        .we-are .img-box img{
+            width:auto;
+            height:100%;
+            margin:0 auto;
+        }
+        .we-are .sec-list{
+            margin-bottom:60px;
+        }
+        .we-are .sec-list:last-child{
+            margin-bottom:0;
+        }
+        .we-are .sec-list-tit{
+            margin:26px 0 14px;
+            font-size:16px;
+            color:#3f51b5;
+            text-align:center;
+            text-transform:uppercase;
+        }
+        .we-are .sec-list-txt{
+            font-size:14px;
+            line-height:23px;
+            text-align:center;
+        }
+        .divider .contents{
+            height:2px;
+            background-color:#eee;
+            text-indent: -99999px;
+        }
+
+        /* work 스타일 */
+        .work .sec-tit{
+            max-width:1132px;
+            margin:0 auto 60px;
+            /* margin-bottom:60px; */
+        }
+        .work .sec-list{
+            float:left;
+            width:100%;
+            position:relative;
+        }
+        .work .sec-list::before{
+            content:'';
+            display:block;
+            position:absolute;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+            background-color:rgba(63, 81, 181,0.5);
+        }
+        .work .sec-list .sec-list-tit{
+            position:absolute;
+            top:20px;
+            left:20px;
+            font-size:23px;
+            color:#fff;
+        }
+        .work .sec-list .sec-list-txt{
+            position:absolute;
+            top:50px;
+            left:20px;
+            font-size:11px;
+            color:#fff;
+        }
        
 
         /* 테블릿(최소 뷰포트너비 768px) 스타일 */
@@ -223,6 +291,11 @@
             .we-are .sec-list:nth-child(2n){
                 margin-right:0;
             }
+
+            /* work 스타일 */
+            .work .sec-list{
+                width:50%;
+            }
         }
 
         /* 데스크탑(최소 뷰포트크기 1200px) 스타일 */
@@ -241,6 +314,19 @@
             }
             .we-are .sec-tit p{
                 width:628px;
+            }
+            .we-are .sec-list{
+                width:268px;
+            }
+            .we-are .sec-list:nth-child(2){
+                margin-right:20px;
+            }
+            .we-are .sec-list:last-child{
+                margin-right:0;
+            }
+             /* work 스타일 */
+             .work .sec-list{
+                width:25%;
             }
         }
     </style>
@@ -341,7 +427,7 @@
         <section class="sec divider">
             <div class="container">
                 <div class="contents">
-                    긴라인
+                    섹션 구분선
                 </div>
             </div>
         </section>
@@ -353,8 +439,47 @@
                             work
                         </h2>
                     </div>
-                    <div class="sec-contents">
-
+                    <div class="sec-contents clearfix">
+                        <div class="sec-list sec-list01">
+                            <div class="img-box"><img src="./images/img-work01.jpg" alt="달리기"></div>
+                            <h3 class="sec-list-tit">달리기</h3>
+                            <p class="sec-list-txt">육상</p>
+                        </div>
+                        <div class="sec-list sec-list02">
+                            <div class="img-box"><img src="./images/img-work02.jpg" alt="미식축구"></div>
+                            <h3 class="sec-list-tit">미식축구</h3>
+                            <p class="sec-list-txt">구기</p>
+                        </div>
+                        <div class="sec-list sec-list03">
+                            <div class="img-box"><img src="./images/img-work03.jpg" alt="헬스"></div>
+                            <h3 class="sec-list-tit">헬스</h3>
+                            <p class="sec-list-txt">트레이닝</p>
+                        </div>
+                        <div class="sec-list sec-list04">
+                            <div class="img-box"><img src="./images/img-work04.jpg" alt="달리기2"></div>
+                            <h3 class="sec-list-tit">달리기2</h3>
+                            <p class="sec-list-txt">육상</p>
+                        </div>
+                        <div class="sec-list sec-list05">
+                            <div class="img-box"><img src="./images/img-work05.jpg" alt="권투"></div>
+                            <h3 class="sec-list-tit">권투</h3>
+                            <p class="sec-list-txt">투기</p>
+                        </div>
+                        <div class="sec-list sec-list06">
+                            <div class="img-box"><img src="./images/img-work06.jpg" alt="아이스하키"></div>
+                            <h3 class="sec-list-tit">아이스하키</h3>
+                            <p class="sec-list-txt">빙상</p>
+                        </div>
+                        <div class="sec-list sec-list07">
+                            <div class="img-box"><img src="./images/img-work07.jpg" alt="스케이트보드"></div>
+                            <h3 class="sec-list-tit">스케이트보드</h3>
+                            <p class="sec-list-txt">레포츠</p>
+                        </div>
+                        <div class="sec-list sec-list08">
+                            <div class="img-box"><img src="./images/img-work08.jpg" alt="농구"></div>
+                            <h3 class="sec-list-tit">농구</h3>
+                            <p class="sec-list-txt">구기</p>
+                        </div>
                     </div>
                 </div>
             </div>
