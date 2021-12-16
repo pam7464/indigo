@@ -12,6 +12,14 @@
 
     <title>INDIGO</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+        :root{
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight:400;
+            font-size:16px;
+            color:#616161;
+            line-height:29px;
+        }
         .clearfix::after{
             content:'';
             display:block;
@@ -25,18 +33,22 @@
         .jumbo{
             max-width:100%;
         }
-        :root{
-            font-family:sans-serif;
-            font-weight:400;
-            font-size:16px;
-            color:#616161;
-            line-height:29px;
-        }
+        
         .wrap{
             overflow:hidden;
         }
         .wrap>.sec{
             margin-bottom:124px;
+        }
+        .hidden-tit{
+            height:0;
+            overflow:hidden;
+        }
+        .sec-tit{
+            font-size:32px;
+            color:#3f51b5;
+            text-align:center;
+            text-transform:uppercase;
         }
 
         /* HEADER 스타일 */
@@ -120,11 +132,6 @@
             z-index:99;
             padding-top:68.992px;
         }
-        .main-slider .sec-tit{
-            height:0;
-            overflow:hidden;
-        }
-
         .swiper-pagination-bullet{
             width:12px;
             height:12px;
@@ -137,10 +144,23 @@
             background-color:#3f51b5 !important;
         }
 
+        /* weare 스타일 */
+        .we-are .sec-tit h2,
+        .we-are .sec-tit p,
+        .we-are .sec-list{
+            float:left; 
+            width:100%;    
+        }
+        .we-are .sec-tit p{
+            font-size:16px;
+            color:#616161;
+        }
        
 
         /* 테블릿(최소 뷰포트너비 768px) 스타일 */
         @media (min-width:768px){
+            
+            /* 헤더스타일 */
             .header{
                 position:static;
             }
@@ -171,10 +191,28 @@
                 position:static;                
                 padding-top:0;
             }
+
+            /* weare 스타일 */
+            .we-are .sec-tit h2,
+            .we-are .sec-tit p{
+                float:left; 
+                width:49%;
+            }
+            .we-are .sec-tit h2{
+                margin-right:2%;    
+                border-right:2px solid #e0e0e0;
+            }
+            .we-are .sec-tit p{
+                text-align:left;
+            }
         }
 
         /* 데스크탑(최소 뷰포트크기 1200px) 스타일 */
         @media (min-width:1200px){
+            .sec-tit{
+                font-size:42px;                
+                text-align:left;                
+            }
 
         }
     </style>
@@ -208,7 +246,7 @@
         <section class="sec main-slider">
             <div class="container jumbo">
                 <div class="contents">
-                    <div class="sec-tit">
+                    <div class="sec-tit hidden-tit">
                         <h2>매인 슬라이더</h2>
                     </div>
                     <div class="sec-contents">
@@ -240,11 +278,34 @@
         <section class="sec we-are">
             <div class="container">
                 <div class="contents">
-                    <div class="sec-tit">
+                    <div class="sec-tit clearfix">
                         <h2>we are</h2>
-                    </div>
-                    <div class="sec-contents">
-
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+                            piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                        </p>
+                    </div>                    
+                    <div class="sec-contents clearfix">
+                        <div class="sec-list sec-list01">
+                            <div class="img-box"><img src="./images/ico-pro01.jpg" alt="home"></div>
+                            <h3 class="sec-list-tit">home</h3>
+                            <p class="sec-list-txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                        <div class="sec-list sec-list02">
+                            <div class="img-box"><img src="./images/ico-pro02.jpg" alt="we are "></div>
+                            <h3 class="sec-list-tit">we are</h3>
+                            <p class="sec-list-txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                        <div class="sec-list sec-list03">
+                            <div class="img-box"><img src="./images/ico-pro03.jpg" alt="work"></div>
+                            <h3 class="sec-list-tit">work</h3>
+                            <p class="sec-list-txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                        <div class="sec-list sec-list04">
+                            <div class="img-box"><img src="./images/ico-pro04.jpg" alt="blog"></div>
+                            <h3 class="sec-list-tit">blog</h3>
+                            <p class="sec-list-txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -304,7 +365,7 @@
         <section class="sec map">
             <div class="container">
                 <div class="contents">
-                    <div class="sec-tit">
+                    <div class="sec-tit hidden-tit">
                         <h2>map</h2>
                     </div>
                     <div class="sec-contents">
