@@ -41,11 +41,12 @@
 
         /* HEADER 스타일 */
         .header{
-            background-color:rgba(0,0,0,0.1);
+            background-color:#fff;
             position:fixed;
             left:0;
             right:0;
             top:0;
+            z-index:100;
         }
         .header .container{
             max-width:1440px;
@@ -113,6 +114,30 @@
             text-align:left;
             text-transform: uppercase;
         }
+        /* 매인슬라이더 스타일 */
+        .main-slider{
+            position:relative;
+            z-index:99;
+            padding-top:68.992px;
+        }
+        .main-slider .sec-tit{
+            height:0;
+            overflow:hidden;
+        }
+
+        .swiper-pagination-bullet{
+            width:12px;
+            height:12px;
+            margin:0 6px !important;
+            border-radius:50%;
+            background-color:#616161 !important;
+            opacity:1;
+        }
+        .swiper-pagination-bullet-active{
+            background-color:#3f51b5 !important;
+        }
+
+       
 
         /* 테블릿(최소 뷰포트너비 768px) 스타일 */
         @media (min-width:768px){
@@ -140,6 +165,11 @@
                 font-weight:500;
                 font-size:16px;
                 color:#3f51b5;
+            }
+
+            .main-slider{
+                position:static;                
+                padding-top:0;
             }
         }
 
@@ -178,24 +208,31 @@
         <section class="sec main-slider">
             <div class="container jumbo">
                 <div class="contents">
-                    <!-- Slider main container -->
-                    <div class="swiper">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide">Slide 1</div>
-                            <div class="swiper-slide">Slide 2</div>
-                            <div class="swiper-slide">Slide 3</div>
+                    <div class="sec-tit">
+                        <h2>매인 슬라이더</h2>
+                    </div>
+                    <div class="sec-contents">
+                        <!-- Slider main container -->
+                        <div class="swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide"><img src="./images/slide01.jpg" alt="슬라이더1"></div>
+                                <div class="swiper-slide"><img src="./images/slide01.jpg" alt="슬라이더2"></div>
+                                <div class="swiper-slide"><img src="./images/slide01.jpg" alt="슬라이더3"></div>
+                                <div class="swiper-slide"><img src="./images/slide01.jpg" alt="슬라이더4"></div>
+                                <div class="swiper-slide"><img src="./images/slide01.jpg" alt="슬라이더5"></div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+                        
+                            <!-- If we need navigation buttons -->
+                            <!-- <div class="swiper-button-prev"></div> -->
+                            <!-- <div class="swiper-button-next"></div> -->
+                        
+                            <!-- If we need scrollbar -->
+                            <!-- <div class="swiper-scrollbar"></div> -->
                         </div>
-                        <!-- If we need pagination -->
-                        <div class="swiper-pagination"></div>
-                    
-                        <!-- If we need navigation buttons -->
-                        <!-- <div class="swiper-button-prev"></div> -->
-                        <!-- <div class="swiper-button-next"></div> -->
-                    
-                        <!-- If we need scrollbar -->
-                        <!-- <div class="swiper-scrollbar"></div> -->
                     </div>
                 </div>
             </div>
@@ -203,11 +240,16 @@
         <section class="sec we-are">
             <div class="container">
                 <div class="contents">
-                    we are
+                    <div class="sec-tit">
+                        <h2>we are</h2>
+                    </div>
+                    <div class="sec-contents">
+
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="sec diveder">
+        <section class="sec divider">
             <div class="container">
                 <div class="contents">
                     긴라인
@@ -217,11 +259,18 @@
         <section class="sec work">
             <div class="container jumbo">
                 <div class="contents">
-                    work
+                    <div class="sec-tit">
+                        <h2>
+                            work
+                        </h2>
+                    </div>
+                    <div class="sec-contents">
+
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="sec mini-diveder">
+        <section class="sec mini-divider">
             <div class="container">
                 <div class="contents">
                     mini
@@ -231,21 +280,36 @@
         <section class="sec blog">
             <div class="container">
                 <div class="contents">
-                    blog
+                    <div class="sec-tit">
+                        <h2>blog</h2>
+                    </div>
+                    <div class="sec-contents">
+
+                    </div>
                 </div>
             </div>
         </section>
         <section class="sec contact">
             <div class="container">
                 <div class="contents">
-                    contact
+                    <div class="sec-tit">
+                        <h2>contact</h2>
+                    </div>
+                    <div class="sec-contents">
+
+                    </div>
                 </div>
             </div>
         </section>
         <section class="sec map">
             <div class="container">
                 <div class="contents">
-                    map
+                    <div class="sec-tit">
+                        <h2>map</h2>
+                    </div>
+                    <div class="sec-contents">
+
+                    </div>
                 </div>
             </div>
         </section>
@@ -257,5 +321,29 @@
             </div>
         </footer>
     </section>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            autoHeight:true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            // navigation: {
+            //     nextEl: '.swiper-button-next',
+            //     prevEl: '.swiper-button-prev',
+            // },
+
+            // And if we need scrollbar
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            // },
+        });
+    </script>
 </body>
 </html>
